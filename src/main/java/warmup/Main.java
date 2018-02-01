@@ -1,0 +1,4 @@
+package warmup;
+
+class Main {
+}
