@@ -1,0 +1,7 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea/
+src/main/resources/
+target/generated-sources/
+target/generated-test-sources/
+target/test-classes/warmup/Sixth.class
+!/.gitignore
