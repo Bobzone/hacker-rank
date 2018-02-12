@@ -1,20 +1,22 @@
 package warmup;
 
-import java.util.Scanner;
+import org.junit.Test;
 
-class Sixth {
-    static void plusMinus(int[] arr) {
-        int arrSize = arr.length;
+import java.util.Arrays;
+
+public class Sixth {
+
+    @Test
+    public void test() {
+        int n = 6;
+        int[] arr = {-4, 3, -9, 0, 4, 1};
+
+        plusMinus(arr);
     }
 
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
-        int[] arr = new int[n];
-        for (int arr_i = 0; arr_i < n; arr_i++) {
-            arr[arr_i] = in.nextInt();
-        }
-        plusMinus(arr);
-        in.close();
+    void plusMinus(int[] arr) {
+        System.out.printf("%.6f %n", (double) Arrays.stream(arr).filter(o -> o > 0.0).count() / arr.length);
+        System.out.printf("%.6f %n", (double) Arrays.stream(arr).filter(o -> o < 0.0).count() / arr.length);
+        System.out.printf("%.6f %n", (double) Arrays.stream(arr).filter(o -> o == 0.0).count() / arr.length);
     }
 }
